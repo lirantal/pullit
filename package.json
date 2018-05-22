@@ -1,7 +1,7 @@
 {
   "name": "pullit",
   "version": "1.3.0",
-  "description": "Display and pull branches from GitHub pull requests",
+  "description": "123 Display and pull branches from GitHub pull requests",
   "main": "src/index.js",
   "preferGlobal": true,
   "scripts": {
