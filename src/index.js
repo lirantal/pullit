@@ -1,7 +1,7 @@
 const GitHubApi = require('github');
 const Menu = require('terminal-menu');
 const {
-  execSync
+  execFileSync
 } = require('child_process');
 const parse = require('parse-github-repo-url');
 
@@ -12,7 +12,7 @@ class Pullit {
   }
 
   init() {
-    const url = execSync(`git config --get remote.origin.url`, {
+    const url = execFileSync('git', ['config', '--get', 'remote.origin.url'], {
       encoding: 'utf8'
     }).trim();
 
@@ -34,8 +34,11 @@ class Pullit {
       })
       .then(res => {
         const branch = res.data.head.ref;
-        execSync(
-          `git fetch origin pull/${id}/head:${branch} && git checkout ${branch}`
+        execFileSync(
+          'git', ['fetch', 'origin', `pull/${id}/head:${branch}`]
+        );
+        execFileSync(
+          'git', ['checkout', branch]
         );
       })
       .catch(err => {
