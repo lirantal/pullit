@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/jkup/pullit.svg?branch=master)](https://travis-ci.org/jkup/pullit)
 
-# Pull It
+# Pull It package
 
 Display and pull branches from GitHub pull requests.
 
