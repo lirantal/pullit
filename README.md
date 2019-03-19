@@ -2,7 +2,7 @@
 
 # Pull It
 
-Display and pull branches from GitHub pull requests.
+display and pull branches from GitHub pull requests.
 
 ## Installation
 
